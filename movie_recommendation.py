@@ -5,24 +5,27 @@
 # 3. get a better interpretation of the algorithm
 
 import pandas as pd
-# pass in column names for each CSV
-u_cols = ['user_id', 'age', 'sex', 'occupation', 'zip_code']
-users = pd.read_csv('ml-100k/u.user', sep='|', names=u_cols,
-                    encoding='latin-1')
 
-r_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
-ratings = pd.read_csv('ml-100k/u.data', sep='\t', names=r_cols,
-                      encoding='latin-1')
+"""
+initialize the data set
+"""
+# user data 
+# take the first 4 columns cause the 5th column is postal code, which we don't really care about.
+user_cols = ['user_id', 'age', 'sex', 'occupation']
+users = pd.read_csv('data/u.user', sep='|', names=user_cols, usecols=range(4), encoding='latin-1')
+
+#ratings
+rate_cols = ['user_id', 'movie_id', 'rating', 'timestamp']
+ratings = pd.read_csv('data/u.data', sep='\t', names=rate_cols, encoding='latin-1')
 
 # the movies file contains columns indicating the movie's genres
-# let's only load the first five columns of the file with usecols
-m_cols = ['movie_id', 'title', 'release_date', 'video_release_date', 'imdb_url']
-movies = pd.read_csv('ml-100k/u.item', sep='|', names=m_cols, usecols=range(5),
-                     encoding='latin-1')
+# a plan to optimize is to perhaps change the columns we get. For example, the IMDB URL is not very important for RECOMMENDING
+# Perhaps we can pass our information for the IMDB URL and others when we actually get a movie?
+# for testing purposes, i am choosing the first 5 columns
+movs_cols = ['movie_id', 'title', 'release_year', 'video_release_date', 'URL']
+movies = pd.read_csv('data/u.item', sep='|', names=movs_cols, usecols=range(5), encoding='latin-1')
 
 # create one merged DataFrame
 movie_ratings = pd.merge(movies, ratings)
 lens = pd.merge(movie_ratings, users)
 most_rated = lens.groupby('title').size().sort_values(ascending=False)[:25]
-most_rated
-print(most_rated)
