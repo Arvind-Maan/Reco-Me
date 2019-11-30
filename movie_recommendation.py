@@ -29,3 +29,13 @@ movies = pd.read_csv('data/u.item', sep='|', names=movs_cols, usecols=range(5), 
 movie_ratings = pd.merge(movies, ratings)
 lens = pd.merge(movie_ratings, users)
 most_rated = lens.groupby('title').size().sort_values(ascending=False)[:25]
+
+
+filtered_movie_ratings = movie_ratings.drop(columns=['URL','video_release_date', 'release_year', 'timestamp'])
+movie_features = filtered_movie_ratings.pivot(index='user_id',columns='movie_id',values='rating').fillna(0)
+# At this point, we have a filtered movie DataFrame
+# we want to iterate through this dataset and accumulate the ratings as one sole-rating.
+from scipy.sparse import csr_matrix
+
+arr_movie_features = csr_matrix(movie_features.values)
+
