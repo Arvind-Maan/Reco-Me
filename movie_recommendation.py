@@ -26,28 +26,41 @@ movies = pd.read_csv('data/u.item', sep='|', names=movs_cols, usecols=range(5), 
 
 # create one merged DataFrame
 movie_ratings = pd.merge(movies, ratings)
-lens = pd.merge(movie_ratings, users)
-
-movie_features = lens.pivot(index='user_id',columns='movie_id',values='rating').fillna(-1)
-
+movie_features = pd.merge(movie_ratings, users).pivot(index='user_id',columns='movie_id',values='rating').fillna(0)
 mu_matrix = np.array(movie_features.values, dtype=int)
-def euclidean_distance(user1, user2):
+
+"""
+Euclidean Distance
+Determines the "Distance" or Simularity between 2 users by checking each of their common rankings and what they ranked them
+Then returning the ratio of how similar they are
+Parameters : the users we are comparing
+"""
+def euclidean_distance(user1,user2):
     #each user is an index in the movie_features dataset, check every movie rating and compare them
-    user1_row = mu_matrix[user1]
-    user2_row = mu_matrix[user2]
-    # find all the mutual rankings and add them as a pair where (user1 rank, user2 rank)
-    distance = []
-    for i in range(0,len(user1_row)):
-        if(user1_row[i] > 0 and user2_row[i] > 0):
-            distance.append((user1_row[i] - user2_row[i])**2)
+    # get the 2 users row, keeping in mind that each column is a movie and each value is the ranking of that movie
+    # mu_matrix is the movie-user matrix, every row in the matrix (indexed like mu_matrix[x]) is a user and his ratings.
+    # so each user is their index in the matrix :d
+    # find all the mutual rankings and store the difference between those 2 rankings ^2
+    mutual_rankings = [(mu_matrix[user1][i] - mu_matrix[user2][i])**2 for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
+    return math.sqrt(sum(mutual_rankings))
 
-    return 1 / (1 + sum(distance))
+def pearson_similarity(user1,user2):
+    # get the mutually ranked as pairs (user1 ranking, user2 ranking)
+    mutual_rankings1 = [mu_matrix[user1][i] for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
+    mutual_rankings2 = [mu_matrix[user2][i] for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
+    # get the variables needed for the algorithm
+    n = len(mutual_rankings2) # both rankings SHOULD be the same size, so choose either to be n
+    # sum of both users
+    sum_x = sum([item for item in mutual_rankings1])
+    sum_y = sum(mutual_rankings2)
+    # sum of both users squared
+    sum_x_sqr = sum(square(mutual_rankings1))
+    sum_y_sqr = sum(square(mutual_rankings2))
+    # sum of the products of paired rankings
+    sum_xy = sum([mutual_rankings1[i] * mutual_rankings2[i] for i in range (0, n)])
+    # we have everything we need, find the correlation coefficient!
+    denom = math.sqrt((n * sum_x_sqr - (sum_x**2)) * (n * sum_y_sqr - (sum_y**2)))
+    return ((n * sum_xy - (sum_x - sum_y))/denom) if denom != 0 else 0
 
-
-min_val = -1
-for i in range(0,943):
-    if(euclidean_distance(15,i) > min_val and i != 15):
-        min_user = i
-        min_val = euclidean_distance(15,i)
-
-print("The Closest User to User 1 is: User " + str(min_user) + " with value: " + str(min_val))
+def square(list):
+    return [i**2 for i in list]
