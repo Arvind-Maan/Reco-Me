@@ -5,10 +5,9 @@
 # 3. get a better interpretation of the algorithm
 
 import pandas as pd
+import numpy as np
+import math
 
-"""
-initialize the data set
-"""
 # user data 
 # take the first 4 columns cause the 5th column is postal code, which we don't really care about.
 user_cols = ['user_id', 'age', 'sex', 'occupation']
@@ -28,14 +27,27 @@ movies = pd.read_csv('data/u.item', sep='|', names=movs_cols, usecols=range(5), 
 # create one merged DataFrame
 movie_ratings = pd.merge(movies, ratings)
 lens = pd.merge(movie_ratings, users)
-most_rated = lens.groupby('title').size().sort_values(ascending=False)[:25]
+
+movie_features = lens.pivot(index='user_id',columns='movie_id',values='rating').fillna(-1)
+
+mu_matrix = np.array(movie_features.values, dtype=int)
+def euclidean_distance(user1, user2):
+    #each user is an index in the movie_features dataset, check every movie rating and compare them
+    user1_row = mu_matrix[user1]
+    user2_row = mu_matrix[user2]
+    # find all the mutual rankings and add them as a pair where (user1 rank, user2 rank)
+    distance = []
+    for i in range(0,len(user1_row)):
+        if(user1_row[i] > 0 and user2_row[i] > 0):
+            distance.append((user1_row[i] - user2_row[i])**2)
+
+    return 1 / (1 + sum(distance))
 
 
-filtered_movie_ratings = movie_ratings.drop(columns=['URL','video_release_date', 'release_year', 'timestamp'])
-movie_features = filtered_movie_ratings.pivot(index='user_id',columns='movie_id',values='rating').fillna(0)
-# At this point, we have a filtered movie DataFrame
-# we want to iterate through this dataset and accumulate the ratings as one sole-rating.
-from scipy.sparse import csr_matrix
+min_val = -1
+for i in range(0,943):
+    if(euclidean_distance(15,i) > min_val and i != 15):
+        min_user = i
+        min_val = euclidean_distance(15,i)
 
-arr_movie_features = csr_matrix(movie_features.values)
-
+print("The Closest User to User 1 is: User " + str(min_user) + " with value: " + str(min_val))
