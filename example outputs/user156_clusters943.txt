@@ -1,0 +1,88 @@
+*****USER SUMMARY FOR USER 156*****
+user_id            156
+age                 25
+sex                  M
+occupation    educator
+Name: 155, dtype: object
+==Users Top 5 Favourite Movies==
+Movie #1
+	1301 | Stripes (1981) | 01-Jan-1981 | http://us.imdb.com/M/title-exact?Stripes+(1981) | User Ranking: 5
+Movie #2
+	1257 | Designated Mourner, The (1997) | 23-May-1997 | http://us.imdb.com/M/title-exact?Designated%20Mourner%2C%20The%20%281997%29 | User Ranking: 5
+Movie #3
+	1015 | Shiloh (1997) | 23-May-1997 | http://us.imdb.com/M/title-exact?Shiloh%20%281997%29 | User Ranking: 5
+Movie #4
+	514 | Annie Hall (1977) | 01-Jan-1977 | http://us.imdb.com/M/title-exact?Annie%20Hall%20(1977) | User Ranking: 5
+Movie #5
+	507 | Streetcar Named Desire, A (1951) | 01-Jan-1951 | http://us.imdb.com/M/title-exact?Streetcar%20Named%20Desire,%20A%20(1951) | User Ranking: 5
+*********************************
+
+############ RECOMMENDATION FOR USER 156 ############
+Using <function euclidean_distance at 0x116748598> for calculating similarity/distance with 943 clusters
+----Recommendation 1----
+813 | Celluloid Closet, The (1995) | 15-Mar-1996 | http://us.imdb.com/M/title-exact?Celluloid%20Closet,%20The%20(1995) | 
+Predicted Rating: 4.975196
+-------------------------
+----Recommendation 2----
+1292 | Simple Wish, A (1997) | 11-Jul-1997 | http://us.imdb.com/M/title-exact?Simple+Wish%2C+A+(1997) | 
+Predicted Rating: 4.970081
+-------------------------
+----Recommendation 3----
+1499 | Grosse Fatigue (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Grosse%20fatigue%20(1994) | 
+Predicted Rating: 4.962778
+-------------------------
+----Recommendation 4----
+1535 | Enfer, L' (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Enfer,%20L'%20(1994) | 
+Predicted Rating: 4.949747
+-------------------------
+----Recommendation 5----
+1466 | Margaret's Museum (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Margaret's%20Museum%20(1995) | 
+Predicted Rating: 4.928173
+-------------------------
+############ END OF RECOMMENDATION FOR USER 156 ############
+############ RECOMMENDATION FOR USER 156 ############
+Using <function pearson_similarity at 0x116748510> for calculating similarity/distance with 943 clusters
+----Recommendation 1----
+813 | Celluloid Closet, The (1995) | 15-Mar-1996 | http://us.imdb.com/M/title-exact?Celluloid%20Closet,%20The%20(1995) | 
+Predicted Rating: 4.993266
+-------------------------
+----Recommendation 2----
+1121 | Umbrellas of Cherbourg, The (Parapluies de Cherbourg, Les) (1964) | 05-Apr-1996 | http://us.imdb.com/M/title-exact?Parapluies%20de%20Cherbourg,%20Les%20(1964) | 
+Predicted Rating: 4.985263
+-------------------------
+----Recommendation 3----
+1292 | Simple Wish, A (1997) | 11-Jul-1997 | http://us.imdb.com/M/title-exact?Simple+Wish%2C+A+(1997) | 
+Predicted Rating: 4.977779
+-------------------------
+----Recommendation 4----
+1200 | Kim (1950) | 01-Jan-1950 | http://us.imdb.com/M/title-exact?Kim%20(1950) | 
+Predicted Rating: 4.965430
+-------------------------
+----Recommendation 5----
+1188 | Young Guns II (1990) | 01-Jan-1990 | http://us.imdb.com/M/title-exact?Young%20Guns%20II%20(1990) | 
+Predicted Rating: 4.957473
+-------------------------
+############ END OF RECOMMENDATION FOR USER 156 ############
+############ RECOMMENDATION FOR USER 156 ############
+Using <function cosine_similarity at 0x116748620> for calculating similarity/distance with 943 clusters
+----Recommendation 1----
+1598 | City of Industry (1997) | 14-Mar-1997 | http://us.imdb.com/M/title-exact?City%20of%20Industry%20(1997) | 
+Predicted Rating: 4.676743
+-------------------------
+----Recommendation 2----
+1292 | Simple Wish, A (1997) | 11-Jul-1997 | http://us.imdb.com/M/title-exact?Simple+Wish%2C+A+(1997) | 
+Predicted Rating: 4.509333
+-------------------------
+----Recommendation 3----
+1652 | Temptress Moon (Feng Yue) (1996) | 13-Jun-1997 | http://us.imdb.com/M/title-exact?Feng%20Yue%20%281996%29 | 
+Predicted Rating: 4.490415
+-------------------------
+----Recommendation 4----
+813 | Celluloid Closet, The (1995) | 15-Mar-1996 | http://us.imdb.com/M/title-exact?Celluloid%20Closet,%20The%20(1995) | 
+Predicted Rating: 4.386952
+-------------------------
+----Recommendation 5----
+1499 | Grosse Fatigue (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Grosse%20fatigue%20(1994) | 
+Predicted Rating: 4.354240
+-------------------------
+############ END OF RECOMMENDATION FOR USER 156 ############

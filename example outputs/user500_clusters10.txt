@@ -1,0 +1,88 @@
+*****USER SUMMARY FOR USER 500*****
+user_id                 500
+age                      28
+sex                       M
+occupation    administrator
+Name: 499, dtype: object
+==Users Top 5 Favourite Movies==
+Movie #1
+	1096 | Commandments (1997) | 02-May-1997 | http://us.imdb.com/Title?Commandments+(1997) | User Ranking: 5
+Movie #2
+	1066 | Balto (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Balto%20(1995) | User Ranking: 5
+Movie #3
+	740 | Jane Eyre (1996) | 05-Apr-1996 | http://us.imdb.com/M/title-exact?Jane%20Eyre%20(1996) | User Ranking: 5
+Movie #4
+	474 | Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963) | 01-Jan-1963 | http://us.imdb.com/M/title-exact?Dr.%20Strangelove%20or:%20How%20I%20Learned%20to%20Stop%20Worrying%20and%20Love%20the%20Bomb%20(1963) | User Ranking: 5
+Movie #5
+	149 | Jude (1996) | 01-Nov-1996 | http://us.imdb.com/M/title-exact?Jude%20(1996) | User Ranking: 5
+*********************************
+
+############ RECOMMENDATION FOR USER 500 ############
+Using <function euclidean_distance at 0x11375f598> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+518 | Miller's Crossing (1990) | 01-Jan-1990 | http://us.imdb.com/M/title-exact?Miller's%20Crossing%20(1990) | 
+Predicted Rating: 4.964110
+-------------------------
+----Recommendation 2----
+529 | My Life as a Dog (Mitt liv som hund) (1985) | 01-Jan-1985 | http://us.imdb.com/M/title-exact?Mitt%20liv%20som%20hund%20(1985) | 
+Predicted Rating: 4.964110
+-------------------------
+----Recommendation 3----
+678 | Volcano (1997) | 25-Apr-1997 | http://us.imdb.com/M/title-exact?Volcano%20%281997%29 | 
+Predicted Rating: 4.964110
+-------------------------
+----Recommendation 4----
+777 | Castle Freak (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Castle%20Freak%20(1995) | 
+Predicted Rating: 4.964110
+-------------------------
+----Recommendation 5----
+168 | Monty Python and the Holy Grail (1974) | 01-Jan-1974 | http://us.imdb.com/M/title-exact?Monty%20Python%20and%20the%20Holy%20Grail%20(1974) | 
+Predicted Rating: 4.960308
+-------------------------
+############ END OF RECOMMENDATION FOR USER 500 ############
+############ RECOMMENDATION FOR USER 500 ############
+Using <function pearson_similarity at 0x11375f510> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+10 | Richard III (1995) | 22-Jan-1996 | http://us.imdb.com/M/title-exact?Richard%20III%20(1995) | 
+Predicted Rating: 4.999264
+-------------------------
+----Recommendation 2----
+53 | Natural Born Killers (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Natural%20Born%20Killers%20(1994) | 
+Predicted Rating: 4.999264
+-------------------------
+----Recommendation 3----
+63 | Santa Clause, The (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Santa%20Clause,%20The%20(1994) | 
+Predicted Rating: 4.999264
+-------------------------
+----Recommendation 4----
+67 | Ace Ventura: Pet Detective (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Ace%20Ventura:%20Pet%20Detective%20(1994) | 
+Predicted Rating: 4.999264
+-------------------------
+----Recommendation 5----
+100 | Fargo (1996) | 14-Feb-1997 | http://us.imdb.com/M/title-exact?Fargo%20(1996) | 
+Predicted Rating: 4.999264
+-------------------------
+############ END OF RECOMMENDATION FOR USER 500 ############
+############ RECOMMENDATION FOR USER 500 ############
+Using <function cosine_similarity at 0x11375f620> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+115 | Haunted World of Edward D. Wood Jr., The (1995) | 26-Apr-1996 | http://us.imdb.com/Title?Haunted+World+of+Edward+D.+Wood+Jr.,+The+(1995) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+223 | Sling Blade (1996) | 22-Nov-1996 | http://us.imdb.com/M/title-exact?Sling%20Blade%20(1996) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+260 | Event Horizon (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Event+Horizon+(1997) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 4----
+274 | Sabrina (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Sabrina%20(1995) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 5----
+381 | Muriel's Wedding (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Muriel's%20Wedding%20(1994) | 
+Predicted Rating: 5.000000
+-------------------------
+############ END OF RECOMMENDATION FOR USER 500 ############

@@ -1,0 +1,88 @@
+*****USER SUMMARY FOR USER 1*****
+user_id                1
+age                   24
+sex                    M
+occupation    technician
+Name: 0, dtype: object
+==Users Top 5 Favourite Movies==
+Movie #1
+	315 | Apt Pupil (1998) | 23-Oct-1998 | http://us.imdb.com/Title?Apt+Pupil+(1998) | User Ranking: 5
+Movie #2
+	312 | Midnight in the Garden of Good and Evil (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Midnight+in+the+Garden+of+Good+and+Evil+(1997) | User Ranking: 5
+Movie #3
+	310 | Rainmaker, The (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Rainmaker,+The+(1997) | User Ranking: 5
+Movie #4
+	301 | In & Out (1997) | 19-Sep-1997 | http://us.imdb.com/Title?In+%26+Out+(1997) | User Ranking: 5
+Movie #5
+	284 | Tin Cup (1996) | 16-Aug-1996 | http://us.imdb.com/M/title-exact?Tin%20Cup%20(1996) | User Ranking: 5
+*********************************
+
+############ RECOMMENDATION FOR USER 1 ############
+Using <function euclidean_distance at 0x112516598> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+33 | Desperado (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Desperado%20(1995) | 
+Predicted Rating: 4.989401
+-------------------------
+----Recommendation 2----
+464 | Vanya on 42nd Street (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Vanya%20on%2042nd%20Street%20(1994) | 
+Predicted Rating: 4.989401
+-------------------------
+----Recommendation 3----
+737 | Sirens (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Sirens%20(1994) | 
+Predicted Rating: 4.989401
+-------------------------
+----Recommendation 4----
+968 | Inspector General, The (1949) | 01-Jan-1949 | http://us.imdb.com/M/title-exact?Inspector%20General,%20The%20(1949) | 
+Predicted Rating: 4.989401
+-------------------------
+----Recommendation 5----
+1038 | Switchback (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Switchback+(1997) | 
+Predicted Rating: 4.989401
+-------------------------
+############ END OF RECOMMENDATION FOR USER 1 ############
+############ RECOMMENDATION FOR USER 1 ############
+Using <function pearson_similarity at 0x112516510> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+901 | Mr. Magoo (1997) | 25-Dec-1997 | http://us.imdb.com/M/title-exact?imdb-title-119718 | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+100 | Fargo (1996) | 14-Feb-1997 | http://us.imdb.com/M/title-exact?Fargo%20(1996) | 
+Predicted Rating: 4.999965
+-------------------------
+----Recommendation 3----
+149 | Jude (1996) | 01-Nov-1996 | http://us.imdb.com/M/title-exact?Jude%20(1996) | 
+Predicted Rating: 4.999965
+-------------------------
+----Recommendation 4----
+523 | Cool Hand Luke (1967) | 01-Jan-1967 | http://us.imdb.com/M/title-exact?Cool%20Hand%20Luke%20(1967) | 
+Predicted Rating: 4.999965
+-------------------------
+----Recommendation 5----
+131 | Breakfast at Tiffany's (1961) | 01-Jan-1961 | http://us.imdb.com/M/title-exact?Breakfast%20at%20Tiffany's%20(1961) | 
+Predicted Rating: 4.998597
+-------------------------
+############ END OF RECOMMENDATION FOR USER 1 ############
+############ RECOMMENDATION FOR USER 1 ############
+Using <function cosine_similarity at 0x112516620> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+356 | Client, The (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Client,%20The%20(1994) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+481 | Apartment, The (1960) | 01-Jan-1960 | http://us.imdb.com/M/title-exact?Apartment,%20The%20(1960) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+482 | Some Like It Hot (1959) | 01-Jan-1959 | http://us.imdb.com/M/title-exact?Some%20Like%20It%20Hot%20(1959) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 4----
+497 | Bringing Up Baby (1938) | 01-Jan-1938 | http://us.imdb.com/M/title-exact?Bringing%20Up%20Baby%20(1938) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 5----
+601 | For Whom the Bell Tolls (1943) | 01-Jan-1943 | http://us.imdb.com/M/title-exact?For%20Whom%20the%20Bell%20Tolls%20(1943) | 
+Predicted Rating: 5.000000
+-------------------------
+############ END OF RECOMMENDATION FOR USER 1 ############

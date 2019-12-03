@@ -94,11 +94,10 @@ def square(list):
 
 """
 recommend
-Applies the Clustering based Algorithm (KNN)
-Recommends [k] number of movies using [fn] with [clusters] as the #of clusters and on user [user].
+Recommends [k] number of movies using [fn] with [depth] as the depth and on user [user].
 Parameters:
     user: the user we are recommending to
-    clusters: the number of clusters
+    depth: how many users are we comparing to this user
     fn: the function used for calculating simularity and distance
     k: the number of recommendations 
 """
@@ -107,9 +106,8 @@ def recommend (user, clusters, fn, k):
     print("Using %s for calculating similarity/distance with %d clusters" %(fn,clusters))
     # we want to use our simularity functions to develop a list of ratings that our user might rate a movie as.
     # this allows us to think what our user will like the most in comparison
-    # to do this, we will use the clustering based algorithm (KNN)
     # get the distances 
-    distances = [(fn(user, other),other) for other in range(0,943)]
+    distances = [(fn(user, other),other) for other in range(0,943) if other != user]
     u_items = mu_matrix[user]
     # sort and reverse the data (closest -> least closest) and attach a bound 
     distances.sort() 
@@ -136,7 +134,7 @@ def recommend (user, clusters, fn, k):
     # for each recommendation         
     for x in recommendations:
         dist,rankings = recommendations[x]
-        recommendations[x] = sum(rankings)/dist
+        recommendations[x] = sum(rankings)/dist if dist != 0 else 0
     # at this point we have a dictionary of all possible recommendations with the format:
     # { [movie_id] : [predicted_rating]}
     # lets pick the top 5!
@@ -179,14 +177,48 @@ def print_recommendations(to_recommend):
             if val != -1: # ignore nan values
                 to_string += str(val) + " | " 
         print(to_string)
-        print("Predicted Rank: %f" %(y))  
+        print("Predicted Rating: %f" %(y))  
         print("-------------------------")
         i += 1 #increment the recommendation
     return
 
+"""
+print_user_summary
+Prints the users top 5 movies
+Parameters:
+    the user
+"""
+def print_user_summary(user):
+    # the header
+    print("*****USER SUMMARY FOR USER %d*****" %(user))
+    user_x = (users.fillna(-1)).loc[user-1]
+    print(user_x)
+    print("==Users Top 5 Favourite Movies==")
+    # for each movie, get the most ranked and sort them by their rank. then pick the top 5
+    # this is a slightly inaccurate representation of favourite movies, a more accurate description would be:
+    #   5 of this users top movies
+    movies_seen = [(mu_matrix[user][x],x) for x in range (0,len(mu_matrix[user])-1)]
+    movies_seen.sort()
+    movies_seen.reverse()
+    movies_seen = movies_seen[0:5]
+    i = 1 # movie index
+    # for each movie, print a formatted description
+    for rating,movie in movies_seen:
+        movie_x = (movies.fillna(-1)).loc[movie-1]
+        to_string = "Movie #%d\n\t" %(i)
+        for val in movie_x.values:
+            if val != -1: # ignore nan values
+                to_string += str(val) + " | " 
+        print(to_string + "User Ranking: %d" %(rating))
+        i += 1 #increment the movie
+    # print the footer
+    print("*********************************\n")
+    return #end
+
 user = 1
-bound = 3
+bound = 943
 k = 5
+print_user_summary(user)
 recommend(user, bound, euclidean_distance,k)
 recommend(user, bound, pearson_similarity,k)
 recommend(user, bound, cosine_similarity,k)
