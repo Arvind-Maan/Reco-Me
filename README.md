@@ -5,9 +5,9 @@ We had to choose a machine learning / artificial intelligence problem and provid
 The project gave freedom for which language you wanted to do it in, so I used this as an opportunity to learn Python. 
 
 The project implements several different ways of calculating simularity and distance:
-    - Euclidean Distance
-    - Pearson Similarity
-    - Cosine Similarity
+- Euclidean Distance
+- Pearson Similarity
+- Cosine Similarity
 
 We use those methods to calculate a user's "distance" from another user.
 
