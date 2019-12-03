@@ -15,3 +15,14 @@ Taking the closest users to our user, we predict possible movie ratings for movi
 weighted value of the opposing user's rating.
 
 This allows us to guess what we would rate every movie that we haven't yet seen, then we order this and return a top 5!
+
+Libraries Used:
+- Built in Libraries: (math, collections, operator)
+- Pandas
+- Numpy
+
+How to download Pandas:
+- https://pandas.pydata.org/getpandas.html
+  
+How to download Numpy: 
+- https://docs.scipy.org/doc/numpy/user/install.html

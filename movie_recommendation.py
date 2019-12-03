@@ -107,7 +107,7 @@ def recommend (user, clusters, fn, k):
     # we want to use our simularity functions to develop a list of ratings that our user might rate a movie as.
     # this allows us to think what our user will like the most in comparison
     # get the distances 
-    distances = [(fn(user, other),other) for other in range(0,943) if other != user]
+    distances = [(fn(user, other),other) for other in range(0,len(mu_matrix)-1) if other != user]
     u_items = mu_matrix[user]
     # sort and reverse the data (closest -> least closest) and attach a bound 
     distances.sort() 
@@ -216,7 +216,7 @@ def print_user_summary(user):
     return #end
 
 user = 1
-bound = 943
+bound = 10
 k = 5
 print_user_summary(user)
 recommend(user, bound, euclidean_distance,k)
