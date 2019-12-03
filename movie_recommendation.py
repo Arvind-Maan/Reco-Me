@@ -215,6 +215,8 @@ def print_user_summary(user):
     print("*********************************\n")
     return #end
 
+
+# sample entries 
 user = 1
 bound = 10
 k = 5
