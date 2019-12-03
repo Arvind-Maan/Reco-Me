@@ -45,27 +45,63 @@ def euclidean_distance(user1,user2):
     common_rankings = [(mu_matrix[user1][i] - mu_matrix[user2][i])**2 for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
     return math.sqrt(sum(common_rankings))
 
+"""
+Pearson Simularity
+returns the value of the correlation coefficient in the pearson simularity algorithm
+Parameters: the users we are comparing
+"""
 def pearson_similarity(user1,user2):
-    # get the mutually ranked as pairs (user1 ranking, user2 ranking)
+    # get the mutually ranked
     common_rankings1 = [mu_matrix[user1][i] for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
     common_rankings2 = [mu_matrix[user2][i] for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
     # get the variables needed for the algorithm
     n = len(common_rankings2) # both rankings SHOULD be the same size, so choose either to be n
-    # sum of both users
-    sum_x = sum([item for item in common_rankings1])
-    sum_y = sum(common_rankings2)
     # sum of both users squared
     sum_x_sqr = sum(square(common_rankings1))
     sum_y_sqr = sum(square(common_rankings2))
     # sum of the products of paired rankings
     sum_xy = sum([common_rankings1[i] * common_rankings2[i] for i in range (0, n)])
     # we have everything we need, find the correlation coefficient!
-    denom = math.sqrt((n * sum_x_sqr - (sum_x**2)) * (n * sum_y_sqr - (sum_y**2)))
-    return ((n * sum_xy - (sum_x - sum_y))/denom) if denom != 0 else 0
+    denom = math.sqrt((n * sum_x_sqr - (sum(common_rankings1)**2)) * (n * sum_y_sqr - (sum(common_rankings2)**2)))
+    return ((n * sum_xy - (sum(common_rankings1) - sum(common_rankings2)))/denom) if denom != 0 else 0
 
+"""
+Cosine Similarity
+computes the cosine simularity function on the users and returns the value
+PArameters: the users we are comparing
+"""
+def cosine_similarity(user1, user2):
+    # get the mutually ranked
+    common_rankingsA = [mu_matrix[user1][i] for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
+    common_rankingsB = [mu_matrix[user2][i] for i in range(0,len(mu_matrix[user1])-1) if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0]
+    #get n
+    n = len(common_rankingsA)
+    #sum of a*b
+    sum_ab =  sum([common_rankingsA[i] * common_rankingsB[i] for i in range (0, n)])
+    #sum of a and b squared
+    sum_a_sqr = sum(square(common_rankingsA))
+    sum_b_sqr = sum(square(common_rankingsB))
+    # get denominator so we can check division by 0
+    denom = (math.sqrt(sum_a_sqr)*math.sqrt(sum_b_sqr))
+    return (sum_ab / denom) if denom != 0 else 0
+"""
+Square
+returns the list with every single value square'd
+parameters: the list 
+"""
 def square(list):
     return [i**2 for i in list]
 
+"""
+recommend
+Applies the Clustering based Algorithm (KNN)
+Recommends [k] number of movies using [fn] with [clusters] as the #of clusters and on user [user].
+Parameters:
+    user: the user we are recommending to
+    clusters: the number of clusters
+    fn: the function used for calculating simularity and distance
+    k: the number of recommendations 
+"""
 def recommend (user, clusters, fn, k):
     print("############ RECOMMENDATION FOR USER %d ############" %(user))
     print("Using %s for calculating similarity/distance with %d clusters" %(fn,clusters))
@@ -106,29 +142,51 @@ def recommend (user, clusters, fn, k):
     # lets pick the top 5!
     recommend_movies = filter_results(recommendations,k)
     # recommend movies outputs an array formatted like so: [ (movie_id, predicted rank)]
-    i = 1
-    for x,y in recommend_movies:
-        movie_x = (movies.fillna(-1)).loc[x+1]
-        print("----Recommendation %d----" %(i))
-        to_string = ""
-        for val in movie_x.values:
-            if val != -1:
-                to_string += str(val) + "|" 
-        print(to_string)
-        print("-------------------------")
-        i += 1
+    # lets print it in a nice way:
+    print_recommendations(recommend_movies)
     print("############ END OF RECOMMENDATION FOR USER %d ############" %(user))
     return recommend_movies
 
 import operator,collections
+
+"""
+filter_results
+sorts all the recommended movies and returns an array of the top (num_of_recommendations)
+parameters:
+    all_outputs: a dictionary consisting of ALL recommendations
+    num_of_recommendations: the number of recommendations we want
+"""
 def filter_results(all_outputs, num_of_recommendations):
     # sort the recommedations by possible rankings
     sorted_recommendations = sorted(all_outputs.items(), key=operator.itemgetter(1),reverse=True)
     # return the top 10
     sorted_recommendations = sorted_recommendations[0:num_of_recommendations]
     return sorted_recommendations
+
+"""
+print_recommendations 
+Prints all the recommendations passed
+Parameters:
+    to_recommend: the list of recommendations to print
+"""
+def print_recommendations(to_recommend):
+    i = 1 # What recommendation is this, starts at 1.
+    for x,y in to_recommend: # for every recommendation
+        movie_x = (movies.fillna(-1)).loc[x-1] #get the row: IGNORE nan values. the reason it's x-1 is because the index is the movie_id-1 since movie_id starts at 1 not 0 and index starts at 0 not 1
+        print("----Recommendation %d----" %(i))
+        to_string = ""
+        for val in movie_x.values:
+            if val != -1: # ignore nan values
+                to_string += str(val) + " | " 
+        print(to_string)
+        print("Predicted Rank: %f" %(y))  
+        print("-------------------------")
+        i += 1 #increment the recommendation
+    return
+
 user = 1
 bound = 3
 k = 5
 recommend(user, bound, euclidean_distance,k)
 recommend(user, bound, pearson_similarity,k)
+recommend(user, bound, cosine_similarity,k)
