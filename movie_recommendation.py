@@ -20,7 +20,7 @@ ratings = pd.read_csv('data/u.data', sep='\t', names=rate_cols, encoding='latin-
 # the movies file contains columns indicating the movie's genres
 # a plan to optimize is to perhaps change the columns we get.
 # For example, the IMDB URL is not very important for RECOMMENDING
-# Perhaps we can pass our information for the IMDB URL and others when we actually get a movie?
+# Perhaps we can passgi our information for the IMDB URL and others when we actually get a movie?
 # for testing purposes, i am choosing the first 5 columns
 movs_cols = ['movie_id', 'title', 'release_year', 'video_release_date', 'URL']
 movies = pd.read_csv('data/u.item', sep='|', names=movs_cols, usecols=range(5), encoding='latin-1')
