@@ -1,24 +1,12 @@
-*****USER SUMMARY FOR USER 1*****
-user_id                1
-age                   24
-sex                    M
-occupation    technician
-Name: 0, dtype: object
-==Users Top 5 Favourite Movies==
-Movie #1
-	315 | Apt Pupil (1998) | 23-Oct-1998 | http://us.imdb.com/Title?Apt+Pupil+(1998) | User Ranking: 5
-Movie #2
-	312 | Midnight in the Garden of Good and Evil (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Midnight+in+the+Garden+of+Good+and+Evil+(1997) | User Ranking: 5
-Movie #3
-	310 | Rainmaker, The (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Rainmaker,+The+(1997) | User Ranking: 5
-Movie #4
-	301 | In & Out (1997) | 19-Sep-1997 | http://us.imdb.com/Title?In+%26+Out+(1997) | User Ranking: 5
-Movie #5
-	284 | Tin Cup (1996) | 16-Aug-1996 | http://us.imdb.com/M/title-exact?Tin%20Cup%20(1996) | User Ranking: 5
-*********************************
-
+____________________Welcome to Project: Reco-ME____________________
+You have the option between recommending a movie to yourself or to an existing user in the database
+Would you like to recommend to yourself? Please enter (Y/N): N
+Please enter the ID of the existing user you'd like to recommend to [Note: Max is 943](Y/N): 1
+Please enter the number of clusters you'd like to test with: (a good one to try is 10)
+[Note: Max is 943]10
+Recommendations with Euclidean Distance
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function euclidean_distance at 0x10bb41598> for calculating similarity/distance with 10 clusters
+Using <function euclidean_distance at 0x10bc80598> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
 227 | Star Trek VI: The Undiscovered Country (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Star%20Trek%20VI:%20The%20Undiscovered%20Country%20(1991) | 
 Predicted Rating: 5.000000
@@ -40,8 +28,35 @@ Predicted Rating: 5.000000
 Predicted Rating: 5.000000
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
+
+Recommendations with Jaccard Similarity
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function pearson_similarity at 0x10bb41510> for calculating similarity/distance with 10 clusters
+Using <function jaccard_similarity at 0x10bc802f0> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+753 | Burnt By the Sun (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Utomlyonnye%20Solntsem%20(1994) | 
+Predicted Rating: 4.381679
+-------------------------
+----Recommendation 2----
+458 | Nixon (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Nixon%20(1995) | 
+Predicted Rating: 4.106164
+-------------------------
+----Recommendation 3----
+514 | Annie Hall (1977) | 01-Jan-1977 | http://us.imdb.com/M/title-exact?Annie%20Hall%20(1977) | 
+Predicted Rating: 3.879399
+-------------------------
+----Recommendation 4----
+899 | Winter Guest, The (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?imdb-title-120521 | 
+Predicted Rating: 3.863248
+-------------------------
+----Recommendation 5----
+908 | Half Baked (1998) | 16-Jan-1998 | http://us.imdb.com/M/title-exact?imdb-title-120693 | 
+Predicted Rating: 3.863248
+-------------------------
+############ END OF RECOMMENDATION FOR USER 1 ############
+
+Recommendations with Pearson Similarity
+############ RECOMMENDATION FOR USER 1 ############
+Using <function pearson_similarity at 0x10bc806a8> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
 901 | Mr. Magoo (1997) | 25-Dec-1997 | http://us.imdb.com/M/title-exact?imdb-title-119718 | 
 Predicted Rating: 5.000000
@@ -63,8 +78,10 @@ Predicted Rating: 4.999965
 Predicted Rating: 4.998597
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
+
+Recommendations with Cosine Similarity
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function cosine_similarity at 0x10bb41620> for calculating similarity/distance with 10 clusters
+Using <function cosine_similarity at 0x10bc80378> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
 356 | Client, The (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Client,%20The%20(1994) | 
 Predicted Rating: 5.000000
@@ -86,3 +103,6 @@ Predicted Rating: 5.000000
 Predicted Rating: 5.000000
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
+
+
+____________________END OF SIMULATION____________________

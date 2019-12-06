@@ -150,7 +150,9 @@ def jaccard_similarity(user1, user2):
                 union_ab.append(mu_matrix[user1][i])
             elif mu_matrix[user2][i] > 0:
                 union_ab.append(mu_matrix[user2][i])    
-    return (len(intersection_ab)/len(union_ab)) if len(union_ab) != 0 else 0
+    # typically jaccard only factors in set difference
+    # for the sake of the movie example, we will use the actual ratings to see if this makes it more accurate
+    return 1 - (sum(intersection_ab)/sum(union_ab)) if sum(union_ab) != 0 else 0
 
 """
 Square

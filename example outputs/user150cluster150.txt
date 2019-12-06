@@ -1,0 +1,108 @@
+____________________Welcome to Project: Reco-ME____________________
+You have the option between recommending a movie to yourself or to an existing user in the database
+Would you like to recommend to yourself? Please enter (Y/N): n
+Please enter the ID of the existing user you'd like to recommend to [Note: Max is 943](Y/N): 150
+Please enter the number of clusters you'd like to test with: (a good one to try is 10)
+[Note: Max is 943]150
+Recommendations with Euclidean Distance
+############ RECOMMENDATION FOR USER 150 ############
+Using <function euclidean_distance at 0x1100fa598> for calculating similarity/distance with 150 clusters
+----Recommendation 1----
+1093 | Live Nude Girls (1995) | 01-Mar-1996 | http://us.imdb.com/M/title-exact?Live%20Nude%20Girls%20(1995) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+1025 | Fire Down Below (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Fire+Down+Below+(1997) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+1393 | Stag (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Stag+(1997) | 
+Predicted Rating: 4.000000
+-------------------------
+----Recommendation 4----
+1611 | Intimate Relations (1996) | 09-May-1997 | http://us.imdb.com/M/title-exact?Intimate%20Relations%20%281996%29 | 
+Predicted Rating: 4.000000
+-------------------------
+----Recommendation 5----
+1616 | Desert Winds (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Desert%20Winds%20(1995) | 
+Predicted Rating: 4.000000
+-------------------------
+############ END OF RECOMMENDATION FOR USER 150 ############
+
+Recommendations with Jaccard Similarity
+############ RECOMMENDATION FOR USER 150 ############
+Using <function jaccard_similarity at 0x1100fa2f0> for calculating similarity/distance with 150 clusters
+----Recommendation 1----
+954 | Unzipped (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Unzipped%20(1995) | 
+Predicted Rating: 4.088962
+-------------------------
+----Recommendation 2----
+10 | Richard III (1995) | 22-Jan-1996 | http://us.imdb.com/M/title-exact?Richard%20III%20(1995) | 
+Predicted Rating: 4.086169
+-------------------------
+----Recommendation 3----
+1159 | Stalker (1979) | 01-Jan-1979 | http://us.imdb.com/M/title-exact?Stalker%20(1979) | 
+Predicted Rating: 4.084967
+-------------------------
+----Recommendation 4----
+1007 | Waiting for Guffman (1996) | 31-Jan-1997 | http://us.imdb.com/M/title-exact?Waiting%20for%20Guffman%20(1996) | 
+Predicted Rating: 4.080064
+-------------------------
+----Recommendation 5----
+1009 | Stealing Beauty (1996) | 14-Jun-1996 | http://us.imdb.com/M/title-exact?Stealing%20Beauty%20(1996) | 
+Predicted Rating: 4.080064
+-------------------------
+############ END OF RECOMMENDATION FOR USER 150 ############
+
+Recommendations with Pearson Similarity
+############ RECOMMENDATION FOR USER 150 ############
+Using <function pearson_similarity at 0x1100fa6a8> for calculating similarity/distance with 150 clusters
+----Recommendation 1----
+1354 | Venice/Venice (1992) | 01-Jan-1992 | http://us.imdb.com/M/title-exact?Venice/Venice%20(1992) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+1356 | Ed's Next Move (1996) | 04-Oct-1996 | http://us.imdb.com/M/title-exact?Ed%27s%20Next%20Move%20%281996%29 | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+1280 | Gang Related (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Gang+Related+(1997) | 
+Predicted Rating: 4.999346
+-------------------------
+----Recommendation 4----
+1171 | Wild Reeds (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Roseaux%20sauvages%2C%20Les%20%281994%29 | 
+Predicted Rating: 4.996855
+-------------------------
+----Recommendation 5----
+831 | Escape from L.A. (1996) | 09-Aug-1996 | http://us.imdb.com/M/title-exact?Escape%20from%20L.A.%20(1996) | 
+Predicted Rating: 4.996548
+-------------------------
+############ END OF RECOMMENDATION FOR USER 150 ############
+
+Recommendations with Cosine Similarity
+############ RECOMMENDATION FOR USER 150 ############
+Using <function cosine_similarity at 0x1100fa378> for calculating similarity/distance with 150 clusters
+----Recommendation 1----
+340 | Boogie Nights (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Boogie+Nights+(1997) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+1025 | Fire Down Below (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Fire+Down+Below+(1997) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+138 | D3: The Mighty Ducks (1996) | 04-Oct-1996 | http://us.imdb.com/M/title-exact?D3:%20The%20Mighty%20Ducks%20(1996) | 
+Predicted Rating: 4.114336
+-------------------------
+----Recommendation 4----
+425 | Bob Roberts (1992) | 01-Jan-1992 | http://us.imdb.com/M/title-exact?Bob%20Roberts%20(1992) | 
+Predicted Rating: 4.114336
+-------------------------
+----Recommendation 5----
+913 | Love and Death on Long Island (1997) | 10-Mar-1998 | http://us.imdb.com/Title?Love+and+Death+on+Long+Island+(1997) | 
+Predicted Rating: 4.114336
+-------------------------
+############ END OF RECOMMENDATION FOR USER 150 ############
+
+
+____________________END OF SIMULATION____________________

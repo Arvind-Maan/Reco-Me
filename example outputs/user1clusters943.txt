@@ -1,24 +1,12 @@
-*****USER SUMMARY FOR USER 1*****
-user_id                1
-age                   24
-sex                    M
-occupation    technician
-Name: 0, dtype: object
-==Users Top 5 Favourite Movies==
-Movie #1
-	315 | Apt Pupil (1998) | 23-Oct-1998 | http://us.imdb.com/Title?Apt+Pupil+(1998) | User Ranking: 5
-Movie #2
-	312 | Midnight in the Garden of Good and Evil (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Midnight+in+the+Garden+of+Good+and+Evil+(1997) | User Ranking: 5
-Movie #3
-	310 | Rainmaker, The (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Rainmaker,+The+(1997) | User Ranking: 5
-Movie #4
-	301 | In & Out (1997) | 19-Sep-1997 | http://us.imdb.com/Title?In+%26+Out+(1997) | User Ranking: 5
-Movie #5
-	284 | Tin Cup (1996) | 16-Aug-1996 | http://us.imdb.com/M/title-exact?Tin%20Cup%20(1996) | User Ranking: 5
-*********************************
-
+___________________Welcome to Project: Reco-ME____________________
+You have the option between recommending a movie to yourself or to an existing user in the database
+Would you like to recommend to yourself? Please enter (Y/N): n
+Please enter the ID of the existing user you'd like to recommend to [Note: Max is 943](Y/N): 1
+Please enter the number of clusters you'd like to test with: (a good one to try is 10)
+[Note: Max is 943]943
+Recommendations with Euclidean Distance
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function euclidean_distance at 0x10cdde598> for calculating similarity/distance with 943 clusters
+Using <function euclidean_distance at 0x113189598> for calculating similarity/distance with 943 clusters
 ----Recommendation 1----
 1305 | National Lampoon's Senior Trip (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?National%20Lampoon's%20Senior%20Trip%20(1995) | 
 Predicted Rating: 4.761905
@@ -40,8 +28,35 @@ Predicted Rating: 4.000000
 Predicted Rating: 3.945205
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
+
+Recommendations with Jaccard Similarity
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function pearson_similarity at 0x10cdde510> for calculating similarity/distance with 943 clusters
+Using <function jaccard_similarity at 0x1131892f0> for calculating similarity/distance with 943 clusters
+----Recommendation 1----
+1652 | Temptress Moon (Feng Yue) (1996) | 13-Jun-1997 | http://us.imdb.com/M/title-exact?Feng%20Yue%20%281996%29 | 
+Predicted Rating: 4.672269
+-------------------------
+----Recommendation 2----
+1292 | Simple Wish, A (1997) | 11-Jul-1997 | http://us.imdb.com/M/title-exact?Simple+Wish%2C+A+(1997) | 
+Predicted Rating: 4.553383
+-------------------------
+----Recommendation 3----
+1200 | Kim (1950) | 01-Jan-1950 | http://us.imdb.com/M/title-exact?Kim%20(1950) | 
+Predicted Rating: 4.414763
+-------------------------
+----Recommendation 4----
+813 | Celluloid Closet, The (1995) | 15-Mar-1996 | http://us.imdb.com/M/title-exact?Celluloid%20Closet,%20The%20(1995) | 
+Predicted Rating: 4.386047
+-------------------------
+----Recommendation 5----
+1188 | Young Guns II (1990) | 01-Jan-1990 | http://us.imdb.com/M/title-exact?Young%20Guns%20II%20(1990) | 
+Predicted Rating: 4.372600
+-------------------------
+############ END OF RECOMMENDATION FOR USER 1 ############
+
+Recommendations with Pearson Similarity
+############ RECOMMENDATION FOR USER 1 ############
+Using <function pearson_similarity at 0x1131896a8> for calculating similarity/distance with 943 clusters
 ----Recommendation 1----
 1121 | Umbrellas of Cherbourg, The (Parapluies de Cherbourg, Les) (1964) | 05-Apr-1996 | http://us.imdb.com/M/title-exact?Parapluies%20de%20Cherbourg,%20Les%20(1964) | 
 Predicted Rating: 4.999174
@@ -63,8 +78,10 @@ Predicted Rating: 4.987201
 Predicted Rating: 4.982222
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
+
+Recommendations with Cosine Similarity
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function cosine_similarity at 0x10cdde620> for calculating similarity/distance with 943 clusters
+Using <function cosine_similarity at 0x113189378> for calculating similarity/distance with 943 clusters
 ----Recommendation 1----
 813 | Celluloid Closet, The (1995) | 15-Mar-1996 | http://us.imdb.com/M/title-exact?Celluloid%20Closet,%20The%20(1995) | 
 Predicted Rating: 4.319324
@@ -86,3 +103,6 @@ Predicted Rating: 4.222927
 Predicted Rating: 4.197152
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
+
+
+____________________END OF SIMULATION____________________

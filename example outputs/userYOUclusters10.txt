@@ -1,0 +1,167 @@
+
+____________________Welcome to Project: Reco-ME____________________
+You have the option between recommending a movie to yourself or to an existing user in the database
+Would you like to recommend to yourself? Please enter (Y/N): Y
+
+
+In order for us to accurately recommend you a movie, we need to get an understanding of some of the movies you like.
+You must rank at least 10 movies so we can get an understanding of your taste :)
+~~~What do you think of this movie?~~~
+Movie 
+        171 | Delicatessen (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Delicatessen%20(1991) | 
+Please enter a rating 1-5, 0 if no opinion: 4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        179 | Clockwork Orange, A (1971) | 01-Jan-1971 | http://us.imdb.com/M/title-exact?Clockwork%20Orange,%20A%20(1971) | 
+Please enter a rating 1-5, 0 if no opinion: 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        796 | Speechless (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Speechless%20(1994) | 
+Please enter a rating 1-5, 0 if no opinion: 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        1466 | Margaret's Museum (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Margaret's%20Museum%20(1995) | 
+Please enter a rating 1-5, 0 if no opinion: 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        736 | Shadowlands (1993) | 01-Jan-1993 | http://us.imdb.com/M/title-exact?Shadowlands%20(1993) | 
+Please enter a rating 1-5, 0 if no opinion: 4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        526 | Ben-Hur (1959) | 01-Jan-1959 | http://us.imdb.com/M/title-exact?Ben-Hur%20(1959) | 
+Please enter a rating 1-5, 0 if no opinion: 5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        1376 | Meet Wally Sparks (1997) | 31-Jan-1997 | http://us.imdb.com/M/title-exact?Meet%20Wally%20Sparks%20(1997) | 
+Please enter a rating 1-5, 0 if no opinion: 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        1659 | Getting Away With Murder (1996) | 12-Apr-1996 | http://us.imdb.com/Title?Getting+Away+With+Murder+(1996) | 
+Please enter a rating 1-5, 0 if no opinion: 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        38 | Net, The (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Net,%20The%20(1995) | 
+Please enter a rating 1-5, 0 if no opinion: 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        398 | Super Mario Bros. (1993) | 01-Jan-1993 | http://us.imdb.com/M/title-exact?Super%20Mario%20Bros.%20(1993) | 
+Please enter a rating 1-5, 0 if no opinion: 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~What do you think of this movie?~~~
+Movie 
+        1372 | Stranger, The (1994) | 01-Jan-1994 | http://us.imdb.com/Title?Stranger,+The+(1994/II) | 
+Please enter a rating 1-5, 0 if no opinion: 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter the number of clusters you'd like to test with: (a good one to try is 10)
+[Note: Max is 943]10
+Recommendations with Euclidean Distance
+############ RECOMMENDATION FOR USER 943 ############
+Using <function euclidean_distance at 0x112095598> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+70 | Four Weddings and a Funeral (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Four%20Weddings%20and%20a%20Funeral%20(1994) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+78 | Free Willy (1993) | 01-Jan-1993 | http://us.imdb.com/M/title-exact?Free%20Willy%20(1993) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+94 | Home Alone (1990) | 01-Jan-1990 | http://us.imdb.com/M/title-exact?Home%20Alone%20(1990) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 4----
+96 | Terminator 2: Judgment Day (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Terminator%202:%20Judgment%20Day%20(1991) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 5----
+98 | Silence of the Lambs, The (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Silence%20of%20the%20Lambs,%20The%20(1991) | 
+Predicted Rating: 5.000000
+-------------------------
+############ END OF RECOMMENDATION FOR USER 943 ############
+
+Recommendations with Jaccard Similarity
+############ RECOMMENDATION FOR USER 943 ############
+Using <function jaccard_similarity at 0x1120952f0> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+70 | Four Weddings and a Funeral (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Four%20Weddings%20and%20a%20Funeral%20(1994) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+78 | Free Willy (1993) | 01-Jan-1993 | http://us.imdb.com/M/title-exact?Free%20Willy%20(1993) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+94 | Home Alone (1990) | 01-Jan-1990 | http://us.imdb.com/M/title-exact?Home%20Alone%20(1990) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 4----
+96 | Terminator 2: Judgment Day (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Terminator%202:%20Judgment%20Day%20(1991) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 5----
+98 | Silence of the Lambs, The (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Silence%20of%20the%20Lambs,%20The%20(1991) | 
+Predicted Rating: 5.000000
+-------------------------
+############ END OF RECOMMENDATION FOR USER 943 ############
+
+Recommendations with Pearson Similarity
+############ RECOMMENDATION FOR USER 943 ############
+Using <function pearson_similarity at 0x1120956a8> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+9 | Dead Man Walking (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Dead%20Man%20Walking%20(1995) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+18 | White Balloon, The (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Badkonake%20Sefid%20(1995) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+56 | Pulp Fiction (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Pulp%20Fiction%20(1994) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 4----
+59 | Three Colors: Red (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Trzy%20kolory:%20Czerwony%20(1994) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 5----
+123 | Frighteners, The (1996) | 19-Jul-1996 | http://us.imdb.com/M/title-exact?Frighteners,%20The%20(1996) | 
+Predicted Rating: 5.000000
+-------------------------
+############ END OF RECOMMENDATION FOR USER 943 ############
+
+Recommendations with Cosine Similarity
+############ RECOMMENDATION FOR USER 943 ############
+Using <function cosine_similarity at 0x112095378> for calculating similarity/distance with 10 clusters
+----Recommendation 1----
+177 | Good, The Bad and The Ugly, The (1966) | 01-Jan-1966 | http://us.imdb.com/M/title-exact?Buono,%20il%20brutto,%20il%20cattivo,%20Il%20(1966) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 2----
+353 | Deep Rising (1998) | 30-Jan-1998 | http://us.imdb.com/M/title-exact?imdb-title-118956 | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 3----
+112 | Flipper (1996) | 10-May-1996 | http://us.imdb.com/M/title-exact?Flipper%20(1996) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 4----
+125 | Phenomenon (1996) | 29-Jun-1996 | http://us.imdb.com/M/title-exact?Phenomenon%20(1996) | 
+Predicted Rating: 5.000000
+-------------------------
+----Recommendation 5----
+1088 | Double Team (1997) | 04-Apr-1997 | http://us.imdb.com/M/title-exact?Double%20Team%20%281997%29 | 
+Predicted Rating: 5.000000
+-------------------------
+############ END OF RECOMMENDATION FOR USER 943 ############
+
+
+____________________END OF SIMULATION____________________
