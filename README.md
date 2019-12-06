@@ -8,6 +8,7 @@ The project implements several different ways of calculating simularity and dist
 - Euclidean Distance
 - Pearson Similarity
 - Cosine Similarity
+- Jaccard Distance
 
 We use those methods to calculate a user's "distance" from another user.
 
