@@ -18,30 +18,30 @@ Movie #5
 *********************************
 
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function euclidean_distance at 0x112516598> for calculating similarity/distance with 10 clusters
+Using <function euclidean_distance at 0x10bb41598> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
-33 | Desperado (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Desperado%20(1995) | 
-Predicted Rating: 4.989401
+227 | Star Trek VI: The Undiscovered Country (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Star%20Trek%20VI:%20The%20Undiscovered%20Country%20(1991) | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 2----
-464 | Vanya on 42nd Street (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Vanya%20on%2042nd%20Street%20(1994) | 
-Predicted Rating: 4.989401
+479 | Vertigo (1958) | 01-Jan-1958 | http://us.imdb.com/M/title-exact?Vertigo%20(1958) | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 3----
-737 | Sirens (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Sirens%20(1994) | 
-Predicted Rating: 4.989401
+518 | Miller's Crossing (1990) | 01-Jan-1990 | http://us.imdb.com/M/title-exact?Miller's%20Crossing%20(1990) | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 4----
-968 | Inspector General, The (1949) | 01-Jan-1949 | http://us.imdb.com/M/title-exact?Inspector%20General,%20The%20(1949) | 
-Predicted Rating: 4.989401
+610 | Gigi (1958) | 01-Jan-1958 | http://us.imdb.com/M/title-exact?Gigi%20(1958) | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 5----
-1038 | Switchback (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Switchback+(1997) | 
-Predicted Rating: 4.989401
+11 | Seven (Se7en) (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Se7en%20(1995) | 
+Predicted Rating: 5.000000
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function pearson_similarity at 0x112516510> for calculating similarity/distance with 10 clusters
+Using <function pearson_similarity at 0x10bb41510> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
 901 | Mr. Magoo (1997) | 25-Dec-1997 | http://us.imdb.com/M/title-exact?imdb-title-119718 | 
 Predicted Rating: 5.000000
@@ -64,7 +64,7 @@ Predicted Rating: 4.998597
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 1 ############
 ############ RECOMMENDATION FOR USER 1 ############
-Using <function cosine_similarity at 0x112516620> for calculating similarity/distance with 10 clusters
+Using <function cosine_similarity at 0x10bb41620> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
 356 | Client, The (1994) | 01-Jan-1994 | http://us.imdb.com/M/title-exact?Client,%20The%20(1994) | 
 Predicted Rating: 5.000000

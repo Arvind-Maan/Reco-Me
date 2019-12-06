@@ -18,30 +18,30 @@ Movie #5
 *********************************
 
 ############ RECOMMENDATION FOR USER 156 ############
-Using <function euclidean_distance at 0x1158ad598> for calculating similarity/distance with 10 clusters
+Using <function euclidean_distance at 0x110fc8598> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
-518 | Miller's Crossing (1990) | 01-Jan-1990 | http://us.imdb.com/M/title-exact?Miller's%20Crossing%20(1990) | 
-Predicted Rating: 4.999231
+308 | FairyTale: A True Story (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Fairytale:+A+True+Story+(1997) | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 2----
-529 | My Life as a Dog (Mitt liv som hund) (1985) | 01-Jan-1985 | http://us.imdb.com/M/title-exact?Mitt%20liv%20som%20hund%20(1985) | 
-Predicted Rating: 4.999231
+330 | 187 (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?187+(1997) | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 3----
-777 | Castle Freak (1995) | 01-Jan-1995 | http://us.imdb.com/M/title-exact?Castle%20Freak%20(1995) | 
-Predicted Rating: 4.999231
+269 | Full Monty, The (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Full+Monty%2C+The+(1997) | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 4----
-1232 | Madonna: Truth or Dare (1991) | 01-Jan-1991 | http://us.imdb.com/M/title-exact?Madonna:%20Truth%20or%20Dare%20(1991) | 
-Predicted Rating: 4.996225
+750 | Amistad (1997) | 18-Dec-1997 | http://us.imdb.com/M/title-exact?imdb-title-118607 | 
+Predicted Rating: 5.000000
 -------------------------
 ----Recommendation 5----
-131 | Breakfast at Tiffany's (1961) | 01-Jan-1961 | http://us.imdb.com/M/title-exact?Breakfast%20at%20Tiffany's%20(1961) | 
-Predicted Rating: 4.977090
+300 | Air Force One (1997) | 01-Jan-1997 | http://us.imdb.com/M/title-exact?Air+Force+One+(1997) | 
+Predicted Rating: 5.000000
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 156 ############
 ############ RECOMMENDATION FOR USER 156 ############
-Using <function pearson_similarity at 0x1158ad510> for calculating similarity/distance with 10 clusters
+Using <function pearson_similarity at 0x110fc8510> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
 633 | Christmas Carol, A (1938) | 01-Jan-1938 | http://us.imdb.com/M/title-exact?Christmas%20Carol,%20A%20(1938) | 
 Predicted Rating: 5.000000
@@ -64,7 +64,7 @@ Predicted Rating: 4.998059
 -------------------------
 ############ END OF RECOMMENDATION FOR USER 156 ############
 ############ RECOMMENDATION FOR USER 156 ############
-Using <function cosine_similarity at 0x1158ad620> for calculating similarity/distance with 10 clusters
+Using <function cosine_similarity at 0x110fc8620> for calculating similarity/distance with 10 clusters
 ----Recommendation 1----
 13 | Mighty Aphrodite (1995) | 30-Oct-1995 | http://us.imdb.com/M/title-exact?Mighty%20Aphrodite%20(1995) | 
 Predicted Rating: 5.000000
