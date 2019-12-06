@@ -130,6 +130,28 @@ def cosine_similarity(user1, user2):
     denom = (math.sqrt(sum_a_sqr)*math.sqrt(sum_b_sqr))
     return (sum_ab / denom) if denom != 0 else 0
 
+
+"""
+Jaccard Similarity
+computes the jaccard simularity function on the users and returns the value
+PArameters: the users we are comparing
+"""
+def jaccard_similarity(user1, user2):
+    # jacard similarity is the intersection of the 2 / the union of the 2 
+    # in other words, the common rankings / all ranked
+    # we just care about length, so don't worry about maintaing indices
+    union_ab = []
+    intersection_ab = []
+    for i in range (0, len(mu_matrix[user1]-1)):
+        if mu_matrix[user1][i] > 0 and mu_matrix[user2][i] > 0:
+            intersection_ab.append(mu_matrix[user1][i])
+        else: # can't be both
+            if mu_matrix[user1][i] > 0:
+                union_ab.append(mu_matrix[user1][i])
+            elif mu_matrix[user2][i] > 0:
+                union_ab.append(mu_matrix[user2][i])    
+    return (len(intersection_ab)/len(union_ab)) if len(union_ab) != 0 else 0
+
 """
 Square
 returns the list with every single value square'd
@@ -278,6 +300,8 @@ k = 5
 
 print("Recommendations with Euclidean Distance")
 recommend(user, bound, euclidean_distance,k)
+print("\nRecommendations with Jaccard Similarity")
+recommend(user, bound, jaccard_similarity,k)
 print("\nRecommendations with Pearson Similarity")
 recommend(user, bound, pearson_similarity,k)
 print("\nRecommendations with Cosine Similarity")
