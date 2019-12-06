@@ -185,6 +185,7 @@ def recommend (user, clusters, fn, k):
             predicted_rank = int(dist*mu_matrix[o][i])
             # update recommendations i to be the value of the similarity predicted rank 
             if (mu_matrix[o][i] > 0 and mu_matrix[user][i] <= 0): #if they ranked it but we didn't
+                # if we are already planning to recommend it, add more weight to the prediction and increase similarity!
                 all_unseen_movies[i] = (dist, [predicted_rank]) if i not in all_unseen_movies else (all_unseen_movies[i][0] + dist, all_unseen_movies[i][1] + [predicted_rank])   
     # update all the values
     for m in all_unseen_movies: 
