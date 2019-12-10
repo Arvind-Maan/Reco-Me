@@ -1,4 +1,9 @@
 # Reco-Me
+How to Run:
+If python3 is already installed simply run:
+  python3 movie_recommendation.py
+and follow the user prompts :)
+
 This project was built for the class Introduction to Artifical Intelligence at the UofM.
 We had to choose a machine learning / artificial intelligence problem and provide a solution to it, my problem was movie recommendation with collabrative filtering as the solution to it.
 
