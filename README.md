@@ -7,7 +7,7 @@ If python3 is already installed simply run,
 and follow the user prompts :)
 
 This project was built for the class Introduction to Artifical Intelligence at the UofM.
-We had to choose a machine learning / artificial intelligence problem and provide a solution to it, my problem was movie recommendation with collabrative filtering as the solution to it.
+We had to choose a machine learning / artificial intelligence problem and provide a solution to it, the problem I choose was movie recommendation with collabrative filtering as the solution to it. This was an open ended project and I've always wondered how recommendation was done within media (music, movies, etc.) so I thought this would be a good chance to explore.
 
 The project gave freedom for which language you wanted to do it in, so I used this as an opportunity to learn Python. 
 
